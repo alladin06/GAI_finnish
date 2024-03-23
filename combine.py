@@ -7,7 +7,7 @@ from app import nearby_hospi
 from visualize_data import  track_progress_main
 from acne import main_acne
 from sayantan import sos_main
-from login import main_l
+# from login import main_l
 
 def main():
 
@@ -43,8 +43,8 @@ def main():
     if app_selection == "Lääkemuistutus":
         # main()
         pass
-    elif app_selection=="Kirjaudu sisään":
-        main_l()
+    # elif app_selection=="Kirjaudu sisään":
+    #     main_l()
         
     elif app_selection == "Muistiinpanot":
         notes_main()
