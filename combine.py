@@ -31,7 +31,7 @@ def main():
     st.markdown(page_bg_img, unsafe_allow_html=True)
     
     st.sidebar.title("Geriatrinen tekoäly")
-    menu = ["Kirjaudu sisään", "Terveystietojen tallennus", "Edistyksen seuranta", "Lähellä olevien sairaaloiden etsiminen",  "Hätä-SOS", "Muistiinpanot","Akneen tunnistus"]
+    menu = ["Kirjaudu sisään", "Terveystietojen tallennus", "Edistyksen seuranta", "Lähellä olevien sairaaloiden etsiminen",  "Hätä-SOS", "Muistiinpanot","Akneen tunnistus","Lähellä olevat tapahtumat"]
     with st.sidebar:
         app_selection = option_menu(
         menu_title = None,
@@ -62,6 +62,33 @@ def main():
         main_data()
     elif app_selection=="Akneen tunnistus":
         main_acne()
+    elif app_selection == "Lähellä olevat tapahtumat":st.markdown("""
+    **Etätapahtuma**: Digivartti: aiheena Google Kalenteri  
+    **Milloin:** Pe, 20.9.2024 klo 10-10.30  
+    **Missä:** etänä Zoomissa  
+    [Lisää tietoa](https://www.entersenior.fi/tapahtumat/digivartti-0924/)
+
+    **Lähitapahtuma**: Ratkaisuja hyvään arkeen  
+    **Milloin:** Ke-To, 2-3.10.2024  
+    **Missä:** Helsingin messukeskus, Messuaukio 1, 00520 Helsinki  
+    [Lisää tietoa](https://hyvaika.expomark.fi/)
+
+    **Matka:** Pohjois-Portugali, Porto ja portviinitilat  
+    **Milloin:** Ma-La, 21-26.10.2024  
+    **Missä:** Porto, Portugali  
+    [Lisää tietoa](https://kilta.senioriliitto.fi/Tapahtumat/tapahtumatiedot.aspx?id=28261)
+
+    **Hybriditapahtuma:** Tunnista nettihuijaus  
+    **Milloin:** Ke, 23.10.2024 klo 13.30-15.00  
+    **Missä:** etänä Zoomissa, katsomo Kampissa  
+    [Lisää tietoa](https://www.entersenior.fi/tapahtumat/tunnista-nettihuijaus/)
+
+    **Lähitapahtuma:** Ohjattu kuntosali  
+    **Milloin:** Ma, 30.12.2024 klo 10.00-11.00  
+    **Missä:** Myllypuron seniorikeskus/Palvelukeskus, Myllymatkantie 4, Helsinki  
+    [Lisää tietoa](https://tapahtumat.hel.fi/fi/events/helsinki:agh3rorroe)
+    """)
+
 
 if __name__ == "__main__":
     main()
